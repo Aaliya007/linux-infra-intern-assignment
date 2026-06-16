@@ -1,0 +1,7 @@
+[Unit]
+Description=Infra Demo Maintenance Task
+
+[Service]
+Type=oneshot
+ExecStart=/home/aaliya/linux-infra-intern-assignment/scripts/maintenance.sh
+
