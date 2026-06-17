@@ -54,7 +54,7 @@ linux-infra-intern-assignment/
 ### 1. Clone the repository inside a local VM
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/Aaliya007/linux-infra-intern-assignment.git
 cd linux-infra-intern-assignment
 ```
 
