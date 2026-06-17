@@ -4,7 +4,13 @@ A local-VM Linux provisioning project that prepares a fresh server for internal 
 
 ## Project overview
 
-This project converts a clean local Linux VM into a reproducible deployment-ready baseline. It installs required packages, creates a non-root operational user, deploys a lightweight Python HTTP health service managed by systemd, applies safe hardening defaults, configures a maintenance timer, and provides a validation script that checks the environment after provisioning and reboot.
+This project converts a clean local Linux VM into a reproducible deployment-ready baseline. It installs required packages, creates a non-root operational user, deploys a lightweight Python HTTP health service managed by systemd, applies safe hardening defaults, configures a maintenance timer, and provides a validation script that checks the environment after provisioning and reb
+
+## Demo Video Link
+
+```bash
+https://drive.google.com/file/d/12TA7zz4pO_c1A5NkNwdIuvk9kh9REWtJ/view?usp=drivesdk
+```
 
 ## Supported operating systems
 
