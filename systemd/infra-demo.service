@@ -1,19 +1,24 @@
 [Unit]
-Description=Infra Demo Health Service
-After=network.target
+Description=Infra Demo Python Health Service
+After=network-online.target
+Wants=network-online.target
 
 [Service]
+Type=simple
 User=infraadmin
 Group=infraadmin
-
+EnvironmentFile=/etc/infra-demo.env
 WorkingDirectory=/opt/infra-demo
-
-EnvironmentFile=/home/aaliya/linux-infra-intern-assignment/config/infra-demo.env
-
-ExecStart=/usr/bin/python3 /home/aaliya/linux-infra-intern-assignment/app/app.py
-
-Restart=always
-RestartSec=5
+ExecStart=/usr/bin/python3 /opt/infra-demo/app.py
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+ReadWritePaths=/var/log/infra-demo /var/lib/infra-demo
+StandardOutput=journal
+StandardError=journal
 
 [Install]
 WantedBy=multi-user.target
