@@ -1,9 +1,11 @@
 [Unit]
-Description=Run maintenance every 5 minutes
+Description=Run Infra Demo Maintenance Periodically
 
 [Timer]
-OnBootSec=1min
-OnUnitActiveSec=5min
+OnBootSec=2min
+OnUnitActiveSec=15min
+Persistent=true
+Unit=infra-maintenance.service
 
 [Install]
 WantedBy=timers.target
